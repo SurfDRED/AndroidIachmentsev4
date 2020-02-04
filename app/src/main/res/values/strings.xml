@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Просмотр фото</string>
+    <string name="btBack">Назад</string>
+    <string name="btForward">Вперед</string>
+    <string name="edView" />
+    <string name="edPhoto">Фото</string>
+</resources>
