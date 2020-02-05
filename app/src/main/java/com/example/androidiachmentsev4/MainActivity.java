@@ -14,21 +14,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        onClickBack();
-        onClickButton();
-    }
-
-    public void onClickButton (){
-
-        // Генерация случайных чисел с помощью класса Random
+// Генерация случайных чисел с помощью класса Random
         final Random random = new Random();
-        // найдем элементы
+// найдем элементы
         final TextView exampleText = findViewById(R.id.textView2);
         Button BtnForward = findViewById(R.id.butForward);
-        // создаем обработчик нажатия Forward и выводим информацию
-        exampleText.setText("http://myfile.org/"+ String.valueOf(random.nextInt(100)));
-
+        Button BtnBack = findViewById(R.id.butBack);
+// создаем обработчик нажатия Forward и выводим информацию
+        exampleText.setText("http://myfile.org/"+ random.nextInt(100));
         BtnForward.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -36,17 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
-
-    }
-
-
-    public void onClickBack (){
-        Button BtnBack = findViewById(R.id.butBack);
-        // создаем обработчик нажатия Back
+// создаем обработчик нажатия Back
         BtnBack.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -54,5 +37,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }
